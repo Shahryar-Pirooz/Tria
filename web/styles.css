@@ -4,16 +4,33 @@
   --primary: #69CB3A;
   --black: #000000;
   --white: #FFFFFF;
-  --lable: #505050;
-  /*background: #282828;
-background: #3C3C3C;
-background: #C3C3C3;
-background: #EBEBEB;
-background: #D7D7D7; */
+  --label: #505050;
 }
 
 html, body {
   font-family: 'Fredoka One', cursive;
+  scroll-behavior: smooth;
+}
+.form-control{
+  border-radius: 15px;
+}
+.div-f{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 300px;
+}
+.btn-primary{
+  width: 300px;
+  border-radius: 10px;
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--primary);
+}
+.btn-primary:hover, .btn-primary:focus{
+  background-color: var(--black);
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .navbar-brand {
@@ -21,14 +38,52 @@ html, body {
   left: 94px;
   top: 38px;
 }
-.full-height {
-  height: 100%;
-  background: yellow;
+
+.first-section{
+  margin-top: 20px;
 }
+
+.text-bg-w, .text-bg-g {
+  color: var(--white);
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 100px;
+  text-shadow: 2px 0px 0 var(--label), 0px 2px 0 var(--label), -2px 0px 0 var(--label), 0px -2px 0 var(--label);
+}
+
+.span-green {
+  color: var(--primary);
+}
+
+.text-bg-g {
+  color: var(--primary);
+  }
+
+.span-white {
+  color: var(--white);
+}
+
 nav .navbar-nav li a {
-  color: var(--lable) !important;
+  color: var(--label) !important;
 }
 
 nav .navbar-nav li a:hover {
   color: var(--primary) !important;
+}
+
+#screenFiller {
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+@media (min-width: 768px){
+  .first-section{
+    margin-top: 100px;
+  }
+  .div-f{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 500px;
+  }
 }
