@@ -11,23 +11,34 @@ html, body {
   font-family: 'Fredoka One', cursive;
   scroll-behavior: smooth;
 }
-.form-control{
+
+li.why-tria-item {
+  list-style-type: circle;
+  font-size: 1.5em;
+  align-items: center;
+  color: var(--label)
+}
+
+.form-control {
   border-radius: 15px;
 }
-.div-f{
+
+.div-f {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
   width: 300px;
 }
-.btn-primary{
+
+.btn-primary {
   width: 300px;
   border-radius: 10px;
   background-color: var(--black);
   color: var(--white);
   border-color: var(--primary);
 }
-.btn-primary:hover, .btn-primary:focus{
+
+.btn-primary:hover, .btn-primary:focus {
   background-color: var(--black);
   color: var(--primary);
   border-color: var(--primary);
@@ -39,7 +50,7 @@ html, body {
   top: 38px;
 }
 
-.first-section{
+.first-section {
   margin-top: 20px;
 }
 
@@ -58,7 +69,7 @@ html, body {
 
 .text-bg-g {
   color: var(--primary);
-  }
+}
 
 .span-white {
   color: var(--white);
@@ -72,18 +83,31 @@ nav .navbar-nav li a:hover {
   color: var(--primary) !important;
 }
 
-#screenFiller {
-    top: 0; right: 0; bottom: 0; left: 0;
+.screenFiller {
+  top: 0;
+  right: 0;
+  bottom: -100;
+  left: 0;
+  min-height: 100vh;
+
 }
 
-@media (min-width: 768px){
-  .first-section{
+@media (min-width: 768px) {
+  .first-section {
     margin-top: 100px;
   }
-  .div-f{
+
+  .div-f {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
     width: 500px;
   }
+
+  li.why-tria-item {
+    line-height: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
 }
