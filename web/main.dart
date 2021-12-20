@@ -11,16 +11,20 @@ void main() {
   var getStrings = {};
 
   name.onChange.listen((_){
-    getStrings['name'] = name.value.toString();
+    getStrings['name'] = name.value.toString().toLowerCase();
   });
   code.onChange.listen((_){
     getStrings['code'] = code.value.toString();
   });
   domain.onChange.listen((_){
-    getStrings['domain'] = domain.value.toString();
+    getStrings['domain'] = domain.value.toString().toLowerCase();
   });
   btn.onClick.listen((_){
-    copyPass(passwordGenerator(getStrings));
+    btn.text = passwordGenerator(getStrings);
+    name.value = null;
+    code.value = null;
+    domain.value = null;
+    copyPass(btn.text);
   });
 }
 
@@ -40,11 +44,21 @@ void copyPass(var pass){
 }
 
 String passwordGenerator(Map strings){
+  var symbols = '!#\$%&()*<=>?@[]^_{}~';
   var name = strings['name'] ?? 'tria';
   var code = strings['code']  ?? 'tria';
   var domain = strings['domain'] ?? 'tria';
   var bytes = utf8.encode("$name$domain");
-  var digest = sha256.convert(bytes);
-  print('$bytes , $digest');
-  return '$name$code$domain';
+  var hmac256 = Hmac(sha256, utf8.encode(code));
+  var digest = hmac256.convert(bytes).toString();
+  var password = '';
+  for (var i = 0 ; i<5 ; i++){
+    password+=symbols[(bytes[0]+bytes[1])%(symbols.length -i)];
+  }
+  password = digest.substring(0,3) + password[0] +
+              digest.substring(3,6).toUpperCase() + password[1] +
+              digest.substring(6,9) + password[2] +
+              digest.substring(9,12).toUpperCase() + password[3] ;
+
+  return password;
 }
