@@ -50,16 +50,11 @@ li.why-tria-item {
   top: 38px;
 }
 
-.first-section {
-  margin-top: 20px;
-}
-
 .text-bg-w, .text-bg-g {
   color: var(--white);
   font-style: normal;
   font-weight: normal;
   text-align: center;
-  margin-top: 100px;
   text-shadow: 2px 0px 0 var(--label), 0px 2px 0 var(--label), -2px 0px 0 var(--label), 0px -2px 0 var(--label);
 }
 
@@ -84,18 +79,15 @@ nav .navbar-nav li a:hover {
 }
 
 .screenFiller {
-  top: 0;
-  right: 0;
-  bottom: -100;
-  left: 0;
   min-height: 100vh;
 
 }
 
+.child-element{
+  margin-top: 12vh;
+}
+
 @media (min-width: 768px) {
-  .first-section {
-    margin-top: 100px;
-  }
 
   .div-f {
     margin-left: auto;
@@ -108,6 +100,10 @@ nav .navbar-nav li a:hover {
     line-height: 40px;
     margin-left: 150px;
     margin-right: 150px;
+  }
+
+  .child-element{
+    margin-top: 22.5vh;
   }
 
 }
