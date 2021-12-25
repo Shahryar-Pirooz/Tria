@@ -12,6 +12,15 @@ html, body {
   scroll-behavior: smooth;
 }
 
+::-moz-selection{
+    color: var(--white);
+	background: var(--primary);
+}
+::selection{
+  color: var(--white);
+background: var(--primary);
+}
+
 li.why-tria-item {
   list-style-type: circle;
   font-size: 1.5em;
