@@ -8,6 +8,7 @@ void main() {
   PasswordInputElement code = document.querySelector('#code') as PasswordInputElement;
   TextInputElement domain = document.querySelector('#domain') as TextInputElement;
   ButtonElement btn = document.querySelector('#btn') as ButtonElement;
+  DivElement snackbar = document.querySelector('#snackbar') as DivElement;
   var getStrings = {};
 
   name.onChange.listen((_){
@@ -25,6 +26,10 @@ void main() {
     code.value = null;
     domain.value = null;
     copyPass(btn.text);
+    snackbar.className='show';
+    new Future.delayed(const Duration(milliseconds: 3000), (){
+      snackbar.className = '';
+      });
   });
 }
 
