@@ -22,16 +22,30 @@ background: var(--primary);
 }
 
 li.tria-item {
-  list-style-type: circle;
+  list-style:none ;
   font-size: 1.5em;
   align-items: center;
   color: var(--label)
+}
+
+ul li.tria-item:before{
+  content: "\2022";
+  color:  var(--primary);
+  width: 1em
 }
 
 p.context{
   font-size: 1.5em;
   align-items: center;
   color: var(--label)
+}
+
+nav .navbar-nav li a {
+  color: var(--label) !important;
+}
+
+nav .navbar-nav li a:hover {
+  color: var(--primary) !important;
 }
 
 .form-control {
@@ -81,15 +95,6 @@ p.context{
   color: var(--primary);
 }
 
-
-nav .navbar-nav li a {
-  color: var(--label) !important;
-}
-
-nav .navbar-nav li a:hover {
-  color: var(--primary) !important;
-}
-
 .screenFiller {
   min-height: 100vh;
 
@@ -108,25 +113,27 @@ nav .navbar-nav li a:hover {
     width: 500px;
   }
 
+
+  .child-element{
+    margin-top: 22.5vh;
+  }
+
+
   li.why-tria-item {
     line-height: 40px;
     margin-left: 150px;
     margin-right: 150px;
   }
 
-  .child-element{
-    margin-top: 22.5vh;
-  }
-
 }
-/*SnackBarTest*/
+/*SnackBar*/
  /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
   min-width: 250px; /* Set a default minimum width */
   margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: #333; /* Black background color */
-  color: #fff; /* White text color */
+  background-color: var(--black); /* Black background color */
+  color: var(--white); /* White text color */
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
   padding: 16px; /* Padding */
