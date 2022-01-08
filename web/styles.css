@@ -3,13 +3,18 @@
 :root {
   --primary: #69CB3A;
   --black: #000000;
-  --white: #FFFFFF;
+  --white: #FAFAFA;
   --label: #505050;
 }
 
 html, body {
   font-family: 'Fredoka One', cursive;
   scroll-behavior: smooth;
+  background: var(--white);
+}
+
+a{
+  color: var(--primary);
 }
 
 ::-moz-selection{
@@ -32,6 +37,18 @@ ul li.tria-item:before{
   content: "\2022";
   color:  var(--primary);
   width: 1em
+}
+
+nav .navbar-nav li a.new-password {
+  color: var(--white) !important;
+  background:var(--primary); 
+  border-radius: 6px;
+  transition-duration: .3s;
+}
+
+nav .navbar-nav li a.new-password:hover {
+  color: var(--primary) !important;
+  background:var(--white);
 }
 
 p.context{
