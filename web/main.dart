@@ -27,7 +27,7 @@ void main() {
     domain.value = null;
     copyPass(btn.text);
     snackbar.className='show';
-    new Future.delayed(const Duration(milliseconds: 3000), (){
+    Future.delayed(const Duration(milliseconds: 3000), (){
       snackbar.className = '';
       });
   });
