@@ -9,6 +9,8 @@ void main() {
   TextInputElement domain = document.querySelector('#domain') as TextInputElement;
   ButtonElement btn = document.querySelector('#btn') as ButtonElement;
   DivElement snackbar = document.querySelector('#snackbar') as DivElement;
+  ImageElement barcode = document.querySelector('#barcode') as ImageElement;
+
   var getStrings = {};
 
   name.onChange.listen((_){
@@ -26,6 +28,13 @@ void main() {
     code.value = null;
     domain.value = null;
     copyPass(btn.text);
+    snackbar.className='show';
+    Future.delayed(const Duration(milliseconds: 3000), (){
+      snackbar.className = '';
+      });
+  });
+  barcode.onClick.listen((_){
+    copyPass('bc1qmqql272emrw6l0fwm9sg5ecug3ujwssl864p8w');
     snackbar.className='show';
     Future.delayed(const Duration(milliseconds: 3000), (){
       snackbar.className = '';
