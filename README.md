@@ -25,6 +25,6 @@ Why Tria?
 * You can even use Tria offline.
 
 ### Tria apps
-https://github.com/Shahryar-Pirooz/Tria-Android.git
+https://github.com/Shahryar-Pirooz/Tria-app.git
 
 
