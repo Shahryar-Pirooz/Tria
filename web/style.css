@@ -1,0 +1,39 @@
+:root{
+--primary: #388ce7;
+--secondary: #3bdea8;
+--background: #fdfefe;
+--text: #191919;
+--shadow: #3e3c41;
+--gradient: linear-gradient(to right top, #388ce7, #00a7f1, #00bde6, #00d0ca, #3bdea8);
+}
+
+html, body{
+    font-family: 'Dosis', sans-serif;
+    background-color: var(--background);
+}
+
+h1 .tria{
+    margin: 16px;
+}
+
+.tria{
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.btn-primary{
+    background-color: var(--primary);
+    border-color: var(--primary);
+    border-radius: 8px;
+    font-weight: bold;
+    color:var(--background);
+}
+
+.cover{
+    height: 90vh;
+}
+
+.navbar{
+    background-color: var(--background) !important;
+}

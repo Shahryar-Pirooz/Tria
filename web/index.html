@@ -1,198 +1,51 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
-  <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicons/favicon-16x16.png">
-  <link rel="manifest" href="imgs/favicons/site.webmanifest">
-  <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,900;1,900&display=swap" rel="stylesheet"> -->
-  <!-- CSS and bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.min.css">
-  <!-- meta tags -->
-  <meta name="description" content="Tria is a modern password generator that creates the same password by the same input data.">
-  <title>tria: New Password Generator </title>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap / css -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+    <title>Tria</title>
 </head>
-
 <body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow">
-    <div class="container">
-      <a class="navbar-brand mb-sm-3 mb-md-0" href="#"><img src="imgs/Logo.svg" alt="Tria logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#donate">donate</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#triaApps">Tria Apps</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#whyTriaPage">Why Tria</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link new-password" href="#getStart">Generate Password</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- navbarEnd -->type_your_description_here
-  <!-- homeSection -->
-  <div class="screenFiller">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-7 child-element" style="margin-top:45vh">
-          <h1 class="display-3 headline">Forget your old passwords and use <span class="span-green">Tria</span>.</h1>
-        </div>
-        <div class="col-sm-12 col-md-5 child-element"><img class="img-fluid" src="imgs/Locked.svg" alt=""></div>
-      </div>
-    </div>
-  </div>
-  <!-- homeSectionEnd -->
-  <!-- getStartSection -->
-  <div class="screenFiller" style="background-color: #69CB3A;">
-    <div class="container" id="getStart">
-      <div class="row">
-        <div class="col-sm-12 col-md-6 child-element">
-          <div class="container">
-            <div class="mb-4 div-f">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Give me a name ...">
-            </div>
-            <div class="mb-4 div-f">
-              <label for="code" class="form-label">Code</label>
-              <input type="password" class="form-control" id="code" placeholder="Give me a code ... ">
-            </div>
-            <div class="mb-4 div-f">
-              <label for="domain" class="form-label">Domain</label>
-              <input type="text" class="form-control" id="domain" placeholder="e.x google.com">
-            </div>
-            <div class="d-flex">
-              <button type="button" class="btn btn-primary mx-auto" id="btn">copy</button>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <h1 class="navbar-brand tria">Tria</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">WhyTria</a>
+              <a class="nav-link" href="#">Help</a>
+              <a class="nav-link" href="#">Donate</a>
             </div>
           </div>
-        </div>
-        <div class="col-sm-12 p-4 col-md-6 child-element">
-          <h2 class="display-4 headline">generate a new password, but you <span class="span-white">don’t</span> need to <span class="span-white">remember</span> it.</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- getStartSectionEnd -->
-  <!-- whyTriaSection -->
-  <div class="screenFiller">
-    <div class="container" id="whyTriaPage">
-      <div class="row">
-        <div class="col-sm-12 col-md-7 child-element">
-          <h2 class="display-4 headline" style="text-align: left; margin-left: 20px;">Why <span class="span-green">Tria</span>?</h2>
-          <ul>
-            <li class="tria-item"> Tria is full free forever.</li>
-            <li class="tria-item"> Easy to use.</li>
-            <li class="tria-item"> Nobody can hack our database. <br> Why? Because we have no database!</li>
-            <li class="tria-item"> Tria never saves your passwords.</li>
-            <li class="tria-item"> You can use strong password anywhere.</li>
-            <li class="tria-item"> You can even use Tria offline.</li>
-          </ul>
-        </div>
-        <div class="col-sm-12 col-md-5 child-element"><img class="img-fluid" src="imgs/Searching.svg" alt=""></div>
-      </div>
-    </div>
-  </div>
-  <!-- whyTriaPageSectionEnd -->
-  <!-- triaAppsSection -->
-  <div class="screenFiller" style="background-color: #69CB3A;">
-    <div class="container" id="triaApps">
-      <div class="row">
-        <div class="col-sm-12 col-md-5 child-element"><img class="img-fluid" src="imgs/cat.svg" alt="cat"></div>
-        <div class="col-sm-12 p-4 col-md-6 child-element">
-          <h3 class="display-4 headline"><span class="span-white">Tria</span> app <br> coming soon ...</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- triaAppsSectionEnd -->
-  <!-- aboutMeSection -->
-  <div class="screenFiller">
-    <div class="container" id="about">
-      <div class="row">
-        <div class="col child-element">
-          <h2 class="display-4 headline">About <span class="span-green">Me</span>!</h2>
-          <p class="context">Hello world,</p>
-          <p class="context">This is <a href="https://dev-shahryar.web.app">Shahryar</a>, the developer of Tria. Passwords are so important in the modern world, but the majority of people use a simple password or use the same password for all
-            accounts. So I created Tria to help them.</p>
-          <p class="context">Tria is a modern password generator that creates the same password by the same input data, but Tria never saves any password and just uses hash (HMAC/SHA256) to create your passwords. I tried to set all the standards for
-            creating a strong password in Tria, such as:</p>
-          <ul>
-            <li class="tria-item"> At least 8 characters</li>
-            <li class="tria-item"> A mixture of both uppercase and lowercase letters</li>
-            <li class="tria-item"> A mixture of letters and numbers</li>
-            <li class="tria-item"> Inclusion of at least one special character, e.g., ! @ # ? ] </li>
-          </ul>
-          <p class="context"> Tria is an open-source project and you can download and use it offline . If you like Tria you can support me by sharing this page with your friends or donating!</p>
-          <div class="card m-auto" id="donate" style="width: 18rem;">
-            <img id="barcode" src="imgs/barcode.png" class="card-img-top" alt="bc1qmqql272emrw6l0fwm9sg5ecug3ujwssl864p8w" style="cursor:pointer;">
-            <div class="card-body">
-              <p class="card-text text-center context">donating by Bitcoin or share this website to your friends.</p>
+          <div>
+              <a class="btn btn-primary" href="#" style="width: 220px;">Get Start</a>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- aboutMeSectionEnd -->
-  <!-- footer -->
-  <div class="footer-basic">
-    <footer>
-      <div class="social">
-        <a href="https://github.com/Shahryar-Pirooz/Tria"><i class="bi bi-github"></i></a>
-        <a href="https://dev-shahryar.web.app/"><i class="bi bi-globe"></i></a>
-      </div>
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <a class="nav-link" href="#donate">donate</a>
-        </li>
-        <li class="list-inline-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="list-inline-item">
-          <a class="nav-link" href="#triaApps">Tria Apps</a>
-        </li>
-        <li class="list-inline-item">
-          <a class="nav-link" href="#whyTriaPage">Why Tria</a>
-        </li>
-        <li class="list-inline-item">
-          <a class="nav-link new-password" href="#getStart">Generate Password</a>
-        </li>
-      </ul>
-    </footer>
-  </div>
-  <!-- footerEnd -->
-  <!-- snackbar -->
-  <div id="snackbar">saved!</div>
-  <!-- snackbarEnd -->
-  <!-- scripts -->
-  <script defer src="main.dart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      </nav>
+      <!-- navbar end -->
+    <main class="container">
+        <div class="cover row">
+          <div class="col" style="margin-top: 150px;">
+            <h2 style="font-weight: bold;">Remember <span class="tria">Tria</span>,<br> So you can forget your
+              old passwords!</h2>
+              <h4>Generate a super-secure password, without having to remember it.</h4>
+          </div>
+        <div class="col" style="display: grid;">
+          <!-- <img src="./images/tria_background.svg" alt="" style="grid-column: 1; grid-row: 1;"> -->
+          <img src="./images/tria_2.svg" alt="" style="grid-column: 1; grid-row: 1;">
+        </div>
+        </div>
+    </main>
 </body>
-
 </html>
