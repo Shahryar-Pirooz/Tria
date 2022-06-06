@@ -31,7 +31,12 @@ h1 .tria{
 }
 
 .cover{
-    height: 90vh;
+    height: 80vh;
+}
+
+.cover-blue{
+    background-color: var(--primary);
+    height: 100vh;
 }
 
 .navbar{
