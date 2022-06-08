@@ -16,7 +16,7 @@
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid ms-5">
           <h1 class="navbar-brand tria">Tria</h1>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,37 +24,57 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#why-tria">WhyTria</a>
-              <a class="nav-link" href="#">Help</a>
               <a class="nav-link" href="#">Donate</a>
             </div>
           </div>
           <div>
-              <a class="btn btn-primary" href="#" style="width: 220px;">Get Start</a>
+              <a class="btn btn-primary me-5" href="#get-started">Get Started</a>
             </div>
         </div>
       </nav>
       <!-- navbar end -->
       <!-- Welcome page -->
     <main class="container-fluid">
-        <div class="cover row">
-          <div class="col ms-3" style="margin-top: 150px;">
-            <h2 style="font-weight: bold;">Remember <span class="tria">Tria</span>,<br> So you can forget your
+        <div class="cover-first row">
+          <div class="col-sm mt-auto mb-auto ms-5 wlc-title">
+            <h2 style="font-weight: bold;">Remember <span class="tria">Tria</span>,<br> So you can forget your<br>
               old passwords!</h2>
-              <h4>Generate a super-secure password, without having to remember it.</h4>
+              <h4>Generate a super-secure password,<br> without having to remember it.</h4>
+              <div class="mt-4">
+                <a class="btn btn-primary me-2  " href="#get-started">Try Tria Free</a>
+                <a class="btn btn-success" href="#">App</a>
+              </div>
           </div>
-        <div class="col" style="display: grid;">
+        <div class="col-sm" style="display: grid;">
           <!-- <img src="./images/tria_background.svg" alt="" style="grid-column: 1; grid-row: 1;"> -->
-          <img src="./images/tria_2.svg" alt="" style="grid-column: 1; grid-row: 1;">
+          <img src="./images/tria_2.svg" alt="Use Tria" class="img-fluid" >
         </div>
         </div>
         <!-- Welcome page end -->
         <!-- Why tria page -->
-        <div class="cover-blue row" id="why-tria">
+        <div class="cover-secound row" id="why-tria">
+          <div class="col">
+            <img src="./images/Not_save.svg" alt="" class="img-fluid img-mini mx-auto my-2 d-block ">
+            <h4 class="text-center text-light">Nothing will be saved anywhere</h4>
+            <h6 class="text-center text-light">so your data is safe</h6>
+          </div>
+          <div class="col">
+            <img src="./images/easy.svg" alt="" class="img-fluid img-mini mx-auto my-2 d-block ">
+            <h4 class="text-center text-light">Always available and easy to use</h4>
+            <h6 class="text-center text-light">you can use Tria offline</h6>
+          </div>
+          <div class="col">
+            <img src="./images/Strong.svg" alt="" class="img-fluid img-mini mx-auto my-2 d-block ">
+            <h4 class="text-center text-light">Creates a super-strong password</h4>
+            <h6 class="text-center text-light"> that doesn’t need remembering</h6>
+          </div>
+        </div>
+        <!-- Why tria page end -->
+        <div class="cover-third row" id="get-started">
           <div class="col">Test1</div>
           <div class="col">Test2</div>
           <div class="col">Test3</div>
         </div>
-        <!-- Why tria page end -->
     </main>
 </body>
 </html>

@@ -12,9 +12,6 @@ html, body{
     background-color: var(--background);
 }
 
-h1 .tria{
-    margin: 16px;
-}
 
 .tria{
     font-size: xx-large;
@@ -25,20 +22,54 @@ h1 .tria{
 .btn-primary{
     background-color: var(--primary);
     border-color: var(--primary);
-    border-radius: 8px;
+    border-radius: 15px;
     font-weight: bold;
     color:var(--background);
 }
 
-.cover{
+.btn-success{
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    border-radius: 15px;
+    font-weight: bold;
+    color:var(--background);
+}
+
+@media (min-width: 576px) {
+
+/* for mobile */
+
+}
+
+@media (min-width: 992px) { 
+
+
+h1 .tria{
+    margin: 16px;
+}
+
+.cover-first{
+    background-color: var(--background);
     height: 80vh;
 }
 
-.cover-blue{
+.cover-secound{
     background-color: var(--primary);
+    height: 24vh;
+}
+
+.cover-third{
+    background-color: var(--background);
     height: 100vh;
 }
 
 .navbar{
     background-color: var(--background) !important;
+}
+
+.img-mini{
+    width: 50px;
+    height: auto;
+}
+
 }
