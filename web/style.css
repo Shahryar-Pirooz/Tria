@@ -4,7 +4,7 @@
 --background: #fdfefe;
 --text: #191919;
 --shadow: #3e3c41;
---gradient: linear-gradient(to right top, #388ce7, #00a7f1, #00bde6, #00d0ca, #3bdea8);
+--gradient: linear-gradient(62.09deg, #388CE7 -9.13%, #399FD9 51%, #3BDEA8 132.83%);
 }
 
 html, body{
@@ -48,7 +48,7 @@ h1 .tria{
     margin: 16px;
 }
 
-h2 ,h3{
+h2, h3, h4{
 
     font-weight: bold;
 }
@@ -59,9 +59,21 @@ h2 ,h3{
 }
 
 .cover-secound{
-    background-color: var(--primary);
-    /* background-image: var(--gradient); */
     height: 90vh;
+    /* background-image: var(--gradient); */
+    display: block;
+    background-image: url(./images/bg.svg);
+    background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom center, 50%, 50%;
+}
+
+.glassmorphism{
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 100px;
 }
 
 .cover-third{
