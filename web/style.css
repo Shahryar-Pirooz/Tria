@@ -48,14 +48,19 @@ h1 .tria{
     margin: 16px;
 }
 
+h2 ,h3{
+
+    font-weight: bold;
+}
+
 .cover-first{
     background-color: var(--background);
     height: 80vh;
 }
 
 .cover-secound{
-    background-color: var(--primary);
-    height: 24vh;
+    background-image: var(--gradient);
+    height: 90vh;
 }
 
 .cover-third{
@@ -68,7 +73,7 @@ h1 .tria{
 }
 
 .img-mini{
-    width: 50px;
+    width: 100px;
     height: auto;
 }
 
