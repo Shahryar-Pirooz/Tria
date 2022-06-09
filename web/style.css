@@ -59,7 +59,8 @@ h2 ,h3{
 }
 
 .cover-secound{
-    background-image: var(--gradient);
+    background-color: var(--primary);
+    /* background-image: var(--gradient); */
     height: 90vh;
 }
 
