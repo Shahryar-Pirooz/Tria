@@ -16,6 +16,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
     <link rel="manifest" href="./images/favicon/site.webmanifest">
+    <script defer src="main.dart.js"></script>
     <title>Tria</title>
 </head>
 <body>
@@ -42,7 +43,7 @@
       <!-- Welcome page -->
     <main class="container-fluid">
         <section class="cover-first row">
-          <div class="col-sm mt-auto mb-auto ms-5 wlc-title">
+          <div class="col-sm mt-auto mb-auto ms-5">
             <h2 style="font-weight: bold;">Remember <span class="tria">Tria</span>,<br> So you can forget your<br>
               old passwords!</h2>
               <h4>Generate a super-secure password,<br> without having to remember it.</h4>
@@ -58,7 +59,7 @@
         </section>
         <!-- Welcome page end -->
         <!-- Why tria page -->
-        <section class="cover-secound container-fluid d-flex justify-content-center align-items-center" id="why-tria">
+        <section class="cover-secound d-flex justify-content-center align-items-center" id="why-tria">
           <div class="glassmorphism container">
             <div>
               <h2 class="text-center text-light my-5">And the question is ... Why Tria?</h2>
@@ -86,11 +87,37 @@
           </div>
         </section>
         <!-- Why tria page end -->
-        <section class="cover-third row" id="get-started">
-          <div class="col">Test1</div>
-          <div class="col">Test2</div>
-          <div class="col">Test3</div>
+        <!-- Password generator -->
+        <section class="cover-third" id="get-started">
+          <div>
+            <h2 class="text-center my-5">Password Generator</h2>
+          </div>
+          <div class="row">
+            <div class="col ms-5 my-5 justify-content-center align-items-center">
+              <form>
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-control mb-2" id="name" placeholder="Enter your name ...">
+                </div>
+                <div class="form-group">
+                  <label for="code">Code:</label>
+                  <input type="password" class="form-control mb-2" id="code" placeholder="Enter a pin code">
+                </div>
+                <div class="form-group">
+                  <label for="domain">Domain"</label>
+                  <input type="url" class="form-control mb-2" id="domain" placeholder="Enter a domain, e.x:google.com">
+                </div>
+                <button type="button" class="btn btn-primary" id="btn">Submit</button>
+              </form>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+              <img src="./images/logo/tria web logo fina 250 px.svg" alt="Tria logo" width="150" height="auto" class="mx-5 my-5">
+            </div>
+          </div>
         </section>
+        <!-- Password generator end-->
+        <!-- The snackbar -->
+<div id="snackbar"></div>
     </main>
 </body>
 </html>

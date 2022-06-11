@@ -2,47 +2,47 @@ import 'dart:html';
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
 
-
 void main() {
   TextInputElement name = document.querySelector('#name') as TextInputElement;
-  PasswordInputElement code = document.querySelector('#code') as PasswordInputElement;
-  TextInputElement domain = document.querySelector('#domain') as TextInputElement;
+  PasswordInputElement code =
+      document.querySelector('#code') as PasswordInputElement;
+  TextInputElement domain =
+      document.querySelector('#domain') as TextInputElement;
   ButtonElement btn = document.querySelector('#btn') as ButtonElement;
   DivElement snackbar = document.querySelector('#snackbar') as DivElement;
-  ImageElement barcode = document.querySelector('#barcode') as ImageElement;
 
   var getStrings = {};
 
-  name.onChange.listen((_){
+  name.onChange.listen((_) {
     getStrings['name'] = name.value.toString().toLowerCase();
   });
-  code.onChange.listen((_){
+  code.onChange.listen((_) {
     getStrings['code'] = code.value.toString();
   });
-  domain.onChange.listen((_){
+  domain.onChange.listen((_) {
     getStrings['domain'] = domain.value.toString().toLowerCase();
   });
-  btn.onClick.listen((_){
+  btn.onClick.listen((_) {
     btn.text = passwordGenerator(getStrings);
     name.value = null;
     code.value = null;
     domain.value = null;
     copyPass(btn.text);
-    snackbar.className='show';
-    Future.delayed(const Duration(milliseconds: 3000), (){
+    snackbar.className = 'show';
+    Future.delayed(const Duration(milliseconds: 3000), () {
       snackbar.className = '';
-      });
+    });
   });
-  barcode.onClick.listen((_){
-    copyPass('bc1qmqql272emrw6l0fwm9sg5ecug3ujwssl864p8w');
-    snackbar.className='show';
-    Future.delayed(const Duration(milliseconds: 3000), (){
-      snackbar.className = '';
-      });
-  });
+  // barcode.onClick.listen((_){
+  //   copyPass('bc1qmqql272emrw6l0fwm9sg5ecug3ujwssl864p8w');
+  //   snackbar.className='show';
+  //   Future.delayed(const Duration(milliseconds: 3000), (){
+  //     snackbar.className = '';
+  //     });
+  // });
 }
 
-void copyPass(var pass){
+void copyPass(var pass) {
   final textarea = TextAreaElement();
   document.body?.append(textarea);
   textarea.style.border = '0';
@@ -57,22 +57,26 @@ void copyPass(var pass){
   textarea.remove();
 }
 
-String passwordGenerator(Map strings){
+String passwordGenerator(Map strings) {
   var symbols = '!#\$%&()*<=>?@[]^_{}~';
   var name = strings['name'] ?? 'tria';
-  var code = strings['code']  ?? 'tria';
+  var code = strings['code'] ?? 'tria';
   var domain = strings['domain'] ?? 'tria';
   var bytes = utf8.encode("$name$domain");
   var hmac256 = Hmac(sha256, utf8.encode(code));
   var digest = hmac256.convert(bytes).toString();
   var password = '';
-  for (var i = 0 ; i<5 ; i++){
-    password+=symbols[(bytes[0]+bytes[1])%(symbols.length -i)];
+  for (var i = 0; i < 5; i++) {
+    password += symbols[(bytes[0] + bytes[1]) % (symbols.length - i)];
   }
-  password = digest.substring(0,3) + password[0] +
-              digest.substring(3,6).toUpperCase() + password[1] +
-              digest.substring(6,9) + password[2] +
-              digest.substring(9,12).toUpperCase() + password[3] ;
+  password = digest.substring(0, 3) +
+      password[0] +
+      digest.substring(3, 6).toUpperCase() +
+      password[1] +
+      digest.substring(6, 9) +
+      password[2] +
+      digest.substring(9, 12).toUpperCase() +
+      password[3];
 
   return password;
 }
