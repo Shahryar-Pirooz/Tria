@@ -22,7 +22,7 @@ html, body{
 .btn-primary{
     background-color: var(--primary);
     border-color: var(--primary);
-    border-radius: 15px;
+    border-radius: 100px;
     font-weight: bold;
     color:var(--background);
 }
@@ -30,19 +30,18 @@ html, body{
 .btn-success{
     background-color: var(--secondary);
     border-color: var(--secondary);
-    border-radius: 15px;
+    border-radius: 100px;
     font-weight: bold;
     color:var(--background);
 }
 
-@media (min-width: 576px) {
-
-/* for mobile */
-
+.form-control{
+    border-radius: 100px;
 }
 
-@media (min-width: 992px) { 
-
+li{
+    font-weight: bold;
+}
 
 h1 .tria{
     margin: 16px;
@@ -55,11 +54,11 @@ h2, h3, h4{
 
 .cover-first{
     background-color: var(--background);
-    height: 80vh;
+    height: 100%;
 }
 
 .cover-secound{
-    height: 90vh;
+    height: 150%;
     /* background-image: var(--gradient); */
     display: block;
     background-image: url(./images/bg.svg);
@@ -78,7 +77,6 @@ h2, h3, h4{
 
 .cover-third{
     background-color: var(--background);
-    height: 100vh;
 }
 
 .navbar{
@@ -88,6 +86,4 @@ h2, h3, h4{
 .img-mini{
     width: 100px;
     height: auto;
-}
-
 }
