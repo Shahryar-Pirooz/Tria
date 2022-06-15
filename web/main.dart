@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'dart:svg';
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
 
@@ -9,18 +10,50 @@ void main() {
   TextInputElement domain =
       document.querySelector('#domain') as TextInputElement;
   ButtonElement btn = document.querySelector('#btn') as ButtonElement;
-  DivElement snackbar = document.querySelector('#snackbar') as DivElement;
+  LIElement nameHelp = document.querySelector('#name-help') as LIElement;
+  LIElement codeHelp = document.querySelector('#code-help') as LIElement;
+  LIElement domainHelp = document.querySelector('#domain-help') as LIElement;
 
   var getStrings = {};
-
+  name.addEventListener('focus', (event) {
+    nameHelp.classes.add('text-focus');
+    codeHelp.classes.remove('text-focus');
+    domainHelp.classes.remove('text-focus');
+  }, true);
+  code.addEventListener('focus', (event) {
+    nameHelp.classes.remove('text-focus');
+    codeHelp.classes.add('text-focus');
+    domainHelp.classes.remove('text-focus');
+  }, true);
+  domain.addEventListener('focus', (event) {
+    nameHelp.classes.remove('text-focus');
+    codeHelp.classes.remove('text-focus');
+    domainHelp.classes.add('text-focus');
+  }, true);
   name.onChange.listen((_) {
     getStrings['name'] = name.value.toString().toLowerCase();
+    if (name.value!.isNotEmpty || name.value.toString() != '') {
+      name.classes.add('input-success');
+    } else {
+      name.classes.remove('input-success');
+    }
   });
+  code.onFocus.listen((event) {});
   code.onChange.listen((_) {
     getStrings['code'] = code.value.toString();
+    if (name.value!.isNotEmpty || name.value.toString() != '') {
+      code.classes.add('input-success');
+    } else {
+      code.classes.remove('input-success');
+    }
   });
   domain.onChange.listen((_) {
     getStrings['domain'] = domain.value.toString().toLowerCase();
+    if (name.value!.isNotEmpty || name.value.toString() != '') {
+      domain.classes.add('input-success');
+    } else {
+      domain.classes.remove('input-success');
+    }
   });
   btn.onClick.listen((_) {
     btn.text = passwordGenerator(getStrings);
@@ -28,18 +61,11 @@ void main() {
     code.value = null;
     domain.value = null;
     copyPass(btn.text);
-    snackbar.className = 'show';
-    Future.delayed(const Duration(milliseconds: 3000), () {
-      snackbar.className = '';
-    });
+    // snackbar.className = 'show';
+    // Future.delayed(const Duration(milliseconds: 3000), () {
+    //   snackbar.className = '';
+    // });
   });
-  // barcode.onClick.listen((_){
-  //   copyPass('bc1qmqql272emrw6l0fwm9sg5ecug3ujwssl864p8w');
-  //   snackbar.className='show';
-  //   Future.delayed(const Duration(milliseconds: 3000), (){
-  //     snackbar.className = '';
-  //     });
-  // });
 }
 
 void copyPass(var pass) {

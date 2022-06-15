@@ -87,3 +87,15 @@ h2, h3, h4{
     width: 100px;
     height: auto;
 }
+
+.input-success{
+    border:  solid var(--secondary);
+    transition: 100ms;
+}
+
+.text-focus{
+    font-weight: bold;
+    font-size: larger;
+    color: var(--primary);
+    transition: 100ms;
+}
