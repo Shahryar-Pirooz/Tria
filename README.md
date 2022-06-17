@@ -1,4 +1,4 @@
-![](web/imgs/Logo.svg)
+<!-- ![](web/imgs/Logo.svg)
 
 Forget your old passwords and use Tria.
 =======================================
@@ -27,4 +27,7 @@ Why Tria?
 ### Tria apps
 https://github.com/Shahryar-Pirooz/Tria-app.git
 
+ -->
 
+
+New version : =========. 98%
