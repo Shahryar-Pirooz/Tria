@@ -1,0 +1,120 @@
+$primary: #388ce7;
+$secondary: #3bdea8;
+$background: #fdfefe;
+$text: #191919;
+$shadow: #3e3c41;
+$gradient: linear-gradient(62.09deg, #388CE7 -9.13%, #399FD9 51%, #3BDEA8 132.83%);
+
+
+@mixin btn($color) {
+    background-color: $color;
+    border-color: $color;
+    border-radius: 100px;
+    font-weight: bold;
+    color: $background;
+}
+
+html,
+body {
+    font-family: 'Dosis', sans-serif;
+    background-color: $background;
+}
+
+h1 {
+    .tria {
+        font-size: larger;
+    }
+
+    :hover {
+        color: $secondary;
+        transition: 2s;
+    }
+}
+
+h2,
+h3,
+h4,
+li {
+
+    font-weight: bold;
+}
+
+.tria {
+    font-size: xx-large;
+    font-weight: bold;
+    color: $primary;
+}
+
+
+.btn-primary {
+    @include btn($primary);
+}
+
+.btn-success {
+    @include btn($secondary);
+}
+
+.form-control {
+    border-radius: 100px;
+}
+
+%section {
+    background-color: $background;
+    height: 90vh;
+}
+
+.section-white {
+    @extend %section;
+}
+
+.section-blue {
+    @extend %section;
+    background-color: $primary;
+    display: block;
+    background-image: url(./images/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center, 50%, 50%;
+
+    .glassmorphism {
+        @extend %section;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(9.5px);
+        -webkit-backdrop-filter: blur(9.5px);
+        border-radius: 100px;
+    }
+}
+
+.navbar {
+    background-color: $background  !important;
+}
+
+
+
+.input-success {
+    border: solid $secondary;
+    transition: 100ms;
+}
+
+.text-focus {
+    font-weight: bold;
+    font-size: larger;
+    color: $primary;
+    transition: 100ms;
+}
+
+@media (max-width: 991px) {
+    .img-mini {
+        width: 10vw;
+        height: auto;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .img-mini {
+        width: 6vw;
+        height: auto;
+    }
+}
