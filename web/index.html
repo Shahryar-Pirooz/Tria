@@ -35,7 +35,7 @@
     <main>
         <section class="section-white container">
           <div class="row">
-          <header class="col-sm my-5">
+          <header class="col-sm my-md-5 my-sm-3">
             <h1 class="text-center text-md-start">Remember <span class="tria">Tria</span>,<br> So you can forget your<br>
               old passwords!</h1>
               <h3 class="text-center text-md-start">Generate a super-secure password,<br> without having to remember it.</h3>
@@ -44,7 +44,7 @@
                 <a class="btn btn-success" href="#">App</a>
               </div>
           </header>
-        <div class="col-sm">
+        <div class="col-sm mb-2">
           <img src="./images/tria_2.svg" alt="Use Tria" class="hero img-fluid">
         </div>
       </div>
@@ -54,25 +54,25 @@
         <section class="container-fluid section-blue d-flex justify-content-center" id="why-tria">
           <div class="glassmorphism">
             <div>
-              <h2 class="container text-center text-light my-5">And the question is ... Why Tria?</h2>
+              <h2 class="container text-center text-light my-5">And the question is ...<br> Why Tria?</h2>
             </div>
             <div class="row">
-              <div class="col-md">
-                <img src="./images/not_save.svg" alt="" class="img-mini mx-auto mb-md-2 d-block ">
+              <div class="col-md mb-5">
+                <img src="./images/not_save.svg" alt="" class="img-mini mx-auto mb-2 d-block ">
                 <h3 class="text-center text-light">  Nothing will be<br>saved anywhere!</h3>
-                <h4 class="text-center text-light">so your data is safe</h4>
+                <h5 class="text-center text-light">so your data is safe</h5>
                 <p class="text-center text-light">Tria generates passwords<br>without using any data bank.</p>
               </div>
-              <div class="col-md">
-                <img src="./images/strong.svg" alt="" class="img-mini mx-auto mb-md-2 d-block ">
+              <div class="col-md mb-5">
+                <img src="./images/strong.svg" alt="" class="img-mini mx-auto mb-2 d-block ">
                 <h3 class="text-center text-light">Super strong<br>passwords!</h3>
-                <h4 class="text-center text-light">Without the need to remember </h4>
+                <h5 class="text-center text-light">Without the need to remember </h5>
                 <p class="text-center text-light">Tria will give you a password that<br>will take 7 trillion years to crack!</p>
               </div>
-              <div class="col-md">
-                <img src="./images/easy.svg" alt="" class="img-mini mx-auto mb-md-2 d-block ">
+              <div class="col-md mb-5">
+                <img src="./images/easy.svg" alt="" class="img-mini mx-auto mb-2 d-block ">
                 <h3 class="text-center text-light">Convenient<br>and easy to use!</h3>
-                <h4 class="text-center text-light">Available online and offline</h4>
+                <h5 class="text-center text-light">Available online and offline</h5>
                 <p class="text-center text-light">All you need to work with tria are<br>nothing but 3 simple inputs!</p>
               </div>
             </div>
@@ -81,11 +81,8 @@
         <!-- Why tria page end -->
         <!-- Password generator -->
         <section class="section-white container" id="get-started">
-          <div>
-            <h2 class="text-center my-5">Password Generator</h2>
-          </div>
-          <div class="row">
-            <div class="col-md ms-md-5 my-5 justify-content-center align-items-center">
+          <div class="row mx-md-5 my-5">
+            <div class="col-md my-5 justify-content-center align-items-center">
               <form>
                 <div class="form-group mb-4">
                   <label for="name">Name:</label>
@@ -99,19 +96,21 @@
                   <label for="domain">Domain:</label>
                   <input type="url" class="form-control" id="domain" placeholder="Enter a domain, e.x:google.com">
                 </div>
-                <button type="button" class="btn btn-primary" id="btn">Generate</button>
+                <div class="d-flex justify-content-center justify-content-md-start">
+                  <button type="button" class="btn btn-primary" id="btn">Generate</button>
+                </div>
               </form>
             </div>
             <div class="col-md ms-md-5 justify-content-center align-items-center">
               <img src="./images/stars.svg" alt="Tria logo" width="150" height="auto" class="my-4 mx-auto" style="display:block;">
-              <div class="row ms5">
-                <p id="tria-help">Using tria is simple, all you need to do is to give tria</p>
-                <ul>
+              <div class="row">
+                <p  class="text-center text-md-start" id="tria-help">Using tria is simple, all you need to do is to give tria</p>
+                <ul class="text-center text-md-start" >
                   <li id="name-help">A name, which can be any name you like (e.g. Michael)</li>
                   <li id="code-help">A simple code that's easy to remember (e.g. 1234)</li>
                   <li id="domain-help">A domain of the website you want the password for (e.g. facebook.com)</li>
                 </ul>
-                <p id="tria-help2">You don’t need to remember or take note of the password because you can always come back, input the name,code and domain and tria will give you the same exact password that you had generated!</p>
+                <p  class="text-center text-md-start" id="tria-help2">You don’t need to remember or take note of the password because you can always come back, input the name,code and domain and tria will give you the same exact password that you had generated!</p>
                 <h3 class="tria">Good Lock!</h3>
               </div>
             </div>

@@ -6,17 +6,17 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-li {
+h3 {
   font-weight: bolder;
 }
 h1 .tria,
 h2 .tria,
-h3 .tria,
-h4 .tria,
-li .tria {
+h3 .tria {
   font-size: larger;
+}
+
+h5 {
+  font-weight: bold;
 }
 
 .tria {
