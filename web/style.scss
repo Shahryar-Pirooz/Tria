@@ -60,13 +60,8 @@ li {
     border-radius: 100px;
 }
 
-%section {
-    background-color: $background;
-    height: 80vh;
-}
-
 .section-white {
-    @extend %section;
+    background-color: $background;
 }
 
 .section-blue {
@@ -121,5 +116,5 @@ li {
 }
 
 .img-mini {
-    @include img(30%)
+    @include img(20%)
 }
