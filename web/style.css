@@ -7,10 +7,6 @@ body {
 h1 .tria {
   font-size: larger;
 }
-h1 :hover {
-  color: #3bdea8;
-  transition: 2s;
-}
 
 h2,
 h3,
@@ -24,21 +20,31 @@ li {
   font-weight: bold;
   color: #388ce7;
 }
+.tria:hover {
+  color: #3bdea8;
+  transition: 2s;
+}
 
-.btn-primary {
+a.btn.btn-primary + .btn-primary {
   background-color: #388ce7;
   border-color: #388ce7;
   border-radius: 100px;
   font-weight: bold;
   color: #fdfefe;
 }
+a.btn.btn-primary + .btn-primary:hover {
+  background-color: #145aa5;
+}
 
-.btn-success {
+a.btn.btn-success {
   background-color: #3bdea8;
   border-color: #3bdea8;
   border-radius: 100px;
   font-weight: bold;
   color: #fdfefe;
+}
+a.btn.btn-success:hover {
+  background-color: #1a996f;
 }
 
 .form-control {
@@ -52,7 +58,6 @@ li {
 
 .section-blue {
   background-color: #388ce7;
-  display: block;
   background-image: url(./images/bg.svg);
   background-repeat: no-repeat;
   background-size: cover;

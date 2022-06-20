@@ -12,6 +12,10 @@ $gradient: linear-gradient(62.09deg, #388CE7 -9.13%, #399FD9 51%, #3BDEA8 132.83
     border-radius: 100px;
     font-weight: bold;
     color: $background;
+
+    &:hover {
+        background-color: darken($color: $color, $amount: 20%);
+    }
 }
 
 html,
@@ -23,11 +27,6 @@ body {
 h1 {
     .tria {
         font-size: larger;
-    }
-
-    :hover {
-        color: $secondary;
-        transition: 2s;
     }
 }
 
@@ -43,14 +42,19 @@ li {
     font-size: xx-large;
     font-weight: bold;
     color: $primary;
+
+    &:hover {
+        color: $secondary;
+        transition: 2s;
+    }
 }
 
 
-.btn-primary {
+a.btn.btn-primary+.btn-primary {
     @include btn($primary);
 }
 
-.btn-success {
+a.btn.btn-success {
     @include btn($secondary);
 }
 
@@ -70,7 +74,6 @@ li {
 .section-blue {
     @extend %section;
     background-color: $primary;
-    display: block;
     background-image: url(./images/bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
