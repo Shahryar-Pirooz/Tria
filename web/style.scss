@@ -24,18 +24,16 @@ body {
     background-color: $background;
 }
 
-h1 {
-    .tria {
-        font-size: larger;
-    }
-}
-
+h1,
 h2,
 h3,
 h4,
 li {
+    font-weight: bolder;
 
-    font-weight: bold;
+    .tria {
+        font-size: larger;
+    }
 }
 
 .tria {
@@ -50,11 +48,11 @@ li {
 }
 
 
-a.btn.btn-primary+.btn-primary {
+.btn.btn-primary {
     @include btn($primary);
 }
 
-a.btn.btn-success {
+.btn.btn-success {
     @include btn($secondary);
 }
 
@@ -64,7 +62,7 @@ a.btn.btn-success {
 
 %section {
     background-color: $background;
-    height: 90vh;
+    height: 80vh;
 }
 
 .section-white {
@@ -72,7 +70,6 @@ a.btn.btn-success {
 }
 
 .section-blue {
-    @extend %section;
     background-color: $primary;
     background-image: url(./images/bg.svg);
     background-repeat: no-repeat;
@@ -80,12 +77,14 @@ a.btn.btn-success {
     background-position: bottom center, 50%, 50%;
 
     .glassmorphism {
-        @extend %section;
+        width: 80%;
+        height: auto;
         background: rgba(255, 255, 255, 0.15);
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(9.5px);
         -webkit-backdrop-filter: blur(9.5px);
         border-radius: 100px;
+        margin: 100px 10px;
     }
 }
 
@@ -107,17 +106,20 @@ a.btn.btn-success {
     transition: 100ms;
 }
 
-@media (max-width: 991px) {
-    .img-mini {
-        width: 10vw;
-        height: auto;
-        margin-top: 10px;
-    }
+@mixin img($precent: 50%) {
+    width: $precent;
+    height: auto;
+    display: block;
 }
 
-@media (min-width: 992px) {
-    .img-mini {
-        width: 6vw;
-        height: auto;
-    }
+.logo {
+    @include img(10%)
+}
+
+.hero {
+    @include img(100%)
+}
+
+.img-mini {
+    @include img(30%)
 }

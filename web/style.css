@@ -4,15 +4,19 @@ body {
   background-color: #fdfefe;
 }
 
-h1 .tria {
-  font-size: larger;
-}
-
+h1,
 h2,
 h3,
 h4,
 li {
-  font-weight: bold;
+  font-weight: bolder;
+}
+h1 .tria,
+h2 .tria,
+h3 .tria,
+h4 .tria,
+li .tria {
+  font-size: larger;
 }
 
 .tria {
@@ -25,25 +29,25 @@ li {
   transition: 2s;
 }
 
-a.btn.btn-primary + .btn-primary {
+.btn.btn-primary {
   background-color: #388ce7;
   border-color: #388ce7;
   border-radius: 100px;
   font-weight: bold;
   color: #fdfefe;
 }
-a.btn.btn-primary + .btn-primary:hover {
+.btn.btn-primary:hover {
   background-color: #145aa5;
 }
 
-a.btn.btn-success {
+.btn.btn-success {
   background-color: #3bdea8;
   border-color: #3bdea8;
   border-radius: 100px;
   font-weight: bold;
   color: #fdfefe;
 }
-a.btn.btn-success:hover {
+.btn.btn-success:hover {
   background-color: #1a996f;
 }
 
@@ -51,9 +55,9 @@ a.btn.btn-success:hover {
   border-radius: 100px;
 }
 
-.section-blue .glassmorphism, .section-blue, .section-white {
+.section-white {
   background-color: #fdfefe;
-  height: 90vh;
+  height: 80vh;
 }
 
 .section-blue {
@@ -64,11 +68,14 @@ a.btn.btn-success:hover {
   background-position: bottom center, 50%, 50%;
 }
 .section-blue .glassmorphism {
+  width: 80%;
+  height: auto;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
   border-radius: 100px;
+  margin: 100px 10px;
 }
 
 .navbar {
@@ -87,18 +94,22 @@ a.btn.btn-success:hover {
   transition: 100ms;
 }
 
-@media (max-width: 991px) {
-  .img-mini {
-    width: 10vw;
-    height: auto;
-    margin-top: 10px;
-  }
+.logo {
+  width: 10%;
+  height: auto;
+  display: block;
 }
-@media (min-width: 992px) {
-  .img-mini {
-    width: 6vw;
-    height: auto;
-  }
+
+.hero {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-mini {
+  width: 30%;
+  height: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
