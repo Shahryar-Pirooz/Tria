@@ -12,9 +12,16 @@ $gradient: linear-gradient(62.09deg, #388CE7 -9.13%, #399FD9 51%, #3BDEA8 132.83
     border-radius: 100px;
     font-weight: bold;
     color: $background;
+    transition: 0.5s;
 
     &:hover {
-        background-color: darken($color: $color, $amount: 20%);
+        background-color: lighten($color: $color, $amount: 10%);
+        transform: scale(1.05);
+    }
+
+    &:active {
+        background-color: darken($color: $color, $amount: 10%);
+        transform: scale(1);
     }
 }
 
@@ -43,10 +50,11 @@ h5 {
     font-size: xx-large;
     font-weight: bold;
     color: $primary;
+    transition: 1s;
+
 
     &:hover {
         color: $secondary;
-        transition: 2s;
     }
 }
 
@@ -65,6 +73,10 @@ h5 {
 
 .section-white {
     background-color: $background;
+
+    @media screen and (max-width: 768px) {
+        height: 84vh;
+    }
 }
 
 .section-blue {
@@ -111,7 +123,11 @@ h5 {
 }
 
 .logo {
-    @include img(10%)
+    @include img(6%);
+
+    @media screen and (max-width: 768px) {
+        @include img(10%);
+    }
 }
 
 .hero {
