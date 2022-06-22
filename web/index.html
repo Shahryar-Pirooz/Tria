@@ -41,7 +41,7 @@
               <h3 class="text-center text-md-start">Generate a super-secure password,<br> without having to remember it.</h3>
               <div class="mb-3 mt-4 d-flex justify-content-center justify-content-md-start">
                 <a class="btn btn-primary me-2" href="#get-started">Try Tria Free</a>
-                <a class="btn btn-success" href="#">App</a>
+                <button class="btn btn-success" id="app-btn">App</button>
               </div>
           </header>
         <div class="col-sm mb-2 my-5 my-md-0">
@@ -102,8 +102,8 @@
               </form>
             </div>
             <div class="col-md ms-md-5 justify-content-center align-items-center">
-              <img src="./images/stars.svg" alt="Tria logo" width="150" height="auto" class="my-4 mx-auto" style="display:block;">
-              <div class="row">
+              <img src="./images/stars.svg" alt="Tria stars" class="my-1 my-md-4 mx-auto d-flex justify-content-center w-25">
+              <div class="row help-text">
                 <p  class="text-center text-md-start" id="tria-help">Using tria is simple, all you need to do is to give tria</p>
                 <ul class="text-center text-md-start" >
                   <li id="name-help">A name, which can be any name you like (e.g. Michael)</li>
@@ -111,13 +111,18 @@
                   <li id="domain-help">A domain of the website you want the password for (e.g. facebook.com)</li>
                 </ul>
                 <p  class="text-center text-md-start" id="tria-help2">You don’t need to remember or take note of the password because you can always come back, input the name,code and domain and tria will give you the same exact password that you had generated!</p>
-                <h3 class="tria">Good Lock!</h3>
+                <h3 class="tria text-center">Good Lock!</h3>
               </div>
             </div>
           </div>
         </section>
         <!-- Password generator end-->
-        </main>
-    <footer></footer>
+        <!-- snackbar -->
+        <div id="snackbar-side">
+          <div id="snackbar-body">
+            <p class="text-center" id="snackbar-text"> This is a test toast </p>
+          </div>
+        </div>
+      </main>
 </body>
 </html>

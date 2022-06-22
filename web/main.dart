@@ -13,6 +13,10 @@ void main() {
   LIElement nameHelp = document.querySelector('#name-help') as LIElement;
   LIElement codeHelp = document.querySelector('#code-help') as LIElement;
   LIElement domainHelp = document.querySelector('#domain-help') as LIElement;
+  DivElement snackbar = document.querySelector('#snackbar-side') as DivElement;
+  ParagraphElement snackbarText =
+      document.querySelector('#snackbar-text') as ParagraphElement;
+  ButtonElement appBtn = document.querySelector('#app-btn') as ButtonElement;
 
   var getStrings = {};
   name.addEventListener('focus', (event) {
@@ -61,10 +65,18 @@ void main() {
     code.value = null;
     domain.value = null;
     copyPass(btn.text);
-    // snackbar.className = 'show';
-    // Future.delayed(const Duration(milliseconds: 3000), () {
-    //   snackbar.className = '';
-    // });
+    snackbar.className = 'show';
+    snackbarText.text = 'Password copied';
+    Future.delayed(const Duration(milliseconds: 3000), () {
+      snackbar.className = '';
+    });
+  });
+  appBtn.onClick.listen((_) {
+    snackbar.className = 'show';
+    snackbarText.text = 'Coming soon ...!';
+    Future.delayed(const Duration(milliseconds: 3000), () {
+      snackbar.className = '';
+    });
   });
 }
 

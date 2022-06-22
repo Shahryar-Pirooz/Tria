@@ -4,12 +4,13 @@ $background: #fdfefe;
 $text: #191919;
 $shadow: #3e3c41;
 $gradient: linear-gradient(62.09deg, #388CE7 -9.13%, #399FD9 51%, #3BDEA8 132.83%);
+$radius: 100px;
 
 
 @mixin btn($color) {
     background-color: $color;
     border-color: $color;
-    border-radius: 100px;
+    border-radius: $radius;
     font-weight: bold;
     color: $background;
     transition: 0.5s;
@@ -68,7 +69,7 @@ h5 {
 }
 
 .form-control {
-    border-radius: 100px;
+    border-radius: $radius;
 }
 
 .section-white {
@@ -93,8 +94,8 @@ h5 {
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(9.5px);
         -webkit-backdrop-filter: blur(9.5px);
-        border-radius: 100px;
-        margin: 100px 10px;
+        border-radius: $radius;
+        margin: 5% 2%;
     }
 }
 
@@ -131,9 +132,38 @@ h5 {
 }
 
 .hero {
-    @include img(100%)
+    @include img(100%);
 }
 
 .img-mini {
-    @include img(20%)
+    @include img(20%);
+}
+
+.help-text {
+    font-size: 1em;
+    margin: 1em;
+}
+
+#snackbar-side {
+    position: fixed;
+    width: 100%;
+    justify-self: center;
+    justify-content: center;
+    display: flex;
+    bottom: -100%;
+    background-color: $primary;
+    transition: 1s;
+
+    &.show {
+        bottom: 0%;
+    }
+}
+
+#snackbar-body {
+    color: $background;
+    font-weight: bolder;
+    width: 100%;
+    justify-content: center;
+    font-size: 1em;
+    padding: 1em 0em;
 }
