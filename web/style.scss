@@ -74,10 +74,6 @@ h5 {
 
 .section-white {
     background-color: $background;
-
-    @media screen and (max-width: 768px) {
-        height: 84vh;
-    }
 }
 
 .section-blue {
@@ -133,6 +129,9 @@ h5 {
 
 .hero {
     @include img(100%);
+    display: flex;
+    margin-bottom: 16px;
+    box-sizing: border-box;
 }
 
 .img-mini {
