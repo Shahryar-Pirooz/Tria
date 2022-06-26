@@ -96,6 +96,12 @@ h5 {
         box-sizing: border-box;
         width: 10%;
         height: auto;
+
+        @media screen and (max-width: 768px) {
+            top: 12%;
+            left: 60%;
+            width: 30%;
+        }
     }
 
     img.star:nth-child(2) {
@@ -105,6 +111,12 @@ h5 {
         box-sizing: border-box;
         width: 40%;
         height: auto;
+
+        @media screen and (max-width: 768px) {
+            top: 50%;
+            left: 6%;
+            width: 40%;
+        }
     }
 
     img.star:nth-child(3) {
