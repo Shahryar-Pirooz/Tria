@@ -6,6 +6,9 @@ $shadow: #3e3c41;
 $gradient: linear-gradient(62.09deg, #388CE7 -9.13%, #399FD9 51%, #3BDEA8 132.83%);
 $radius: 100px;
 
+html {
+    height: 100vh;
+}
 
 @mixin btn($color) {
     background-color: $color;
@@ -46,7 +49,6 @@ h5 {
     font-weight: bold;
 }
 
-
 .tria {
     font-size: xx-large;
     font-weight: bold;
@@ -77,22 +79,54 @@ h5 {
 }
 
 .section-blue {
-    background-color: $primary;
-    background-image: url(./images/bg.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center, 50%, 50%;
+    background-image: $gradient;
+    position: relative;
+    // background-image: url(./images/bg.svg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: bottom center, 50%, 50%;
 
-    .glassmorphism {
-        width: 80%;
+
+    //TODO: this is it
+    img.star:nth-child(1) {
+        position: absolute;
+        top: -5%;
+        left: 80%;
+        rotate: 20deg;
+        box-sizing: border-box;
+        width: 10%;
         height: auto;
-        background: rgba(255, 255, 255, 0.15);
-        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
-        backdrop-filter: blur(9.5px);
-        -webkit-backdrop-filter: blur(9.5px);
-        border-radius: $radius;
-        margin: 5% 2%;
     }
+
+    img.star:nth-child(2) {
+        position: absolute;
+        top: 20%;
+        left: -2%;
+        box-sizing: border-box;
+        width: 40%;
+        height: auto;
+    }
+
+    img.star:nth-child(3) {
+        position: absolute;
+        top: 70%;
+        left: 60%;
+        rotate: 40deg;
+        box-sizing: border-box;
+        width: 20%;
+        height: auto;
+    }
+}
+
+.glassmorphism {
+    width: 80%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border-radius: $radius;
+    margin: 5% 2%;
 }
 
 .navbar {
@@ -131,7 +165,6 @@ h5 {
     @include img(100%);
     display: flex;
     margin-bottom: 16px;
-    box-sizing: border-box;
 }
 
 .img-mini {
