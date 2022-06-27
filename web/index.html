@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,7 @@
 </head>
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light shadow">
         <div class="container d-sm-flex justify-content-center justify-content-lg-between">
           <img class="navbar logo " src="./images/logo/tria web logo final 97 px.svg" alt="Tria logo">
           </button>
@@ -33,14 +34,14 @@
       <!-- navbar end -->
       <!-- Welcome page -->
     <main>
-        <section class="section-white container">
+        <section class="section-white container mt-4">
           <div class="row">
           <header class="col-md my-lg-5 my-md-3 order-2 order-md-1">
             <h1 class="text-center text-lg-start">Remember <span class="tria">Tria</span>,<br> So you can forget your<br>
               old passwords!</h1>
               <h3 class="text-center text-lg-start">Generate a super-secure password,<br> without having to remember it.</h3>
               <div class="mb-3 mt-4 d-flex justify-content-center justify-content-lg-start">
-                <a class="btn btn-primary me-2" href="#get-started">Try Tria Free</a>
+                <a class="btn btn-primary me-2" href="#get-started">Generator now</a>
                 <button class="btn btn-success" id="app-btn">App</button>
               </div>
           </header>
@@ -129,5 +130,13 @@
           </div>
         </div>
       </main>
+      <footer class="container-fluid">
+        <div class="row">
+          <p class="lead text-light text-center">
+            © 2022 by Wizigners team with magic and love.
+          </p>
+        </div>
+      </footer>
+      <script src="js/app.js"></script>
 </body>
 </html>

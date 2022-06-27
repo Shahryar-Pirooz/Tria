@@ -1,0 +1,21 @@
+{
+    "name": "Tria Password",
+    "short_name": "Tria",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#388ce7",
+    "description": "Website design and development company",
+    "theme_color": "#388ce7",
+    "icons": [
+      {
+        "src": "/images/favicon/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/images/favicon/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
