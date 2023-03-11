@@ -1,33 +1,16 @@
-<!-- ![](web/imgs/Logo.svg)
+# Tria
+## Remember <b>Tria</b>,<br/>So you can forget your<br/>old passwords!
+Generate a super-secure password,
+without having to remember it.
+## And the question is ...Why Tria?
+- Nothing will be saved anywhere!
+- Super strong passwords!
+- Convenient and easy to use!
 
-Forget your old passwords and use Tria.
-=======================================
-the majority of people use a simple password or use the same password for all accounts. So I created Tria to help them.
+## Using tria is simple, all you need to do is to give tria
+- A name, which can be any name you like (e.g. Michael)
+- A simple code that's easy to remember (e.g. 1234)
+- A domain of the website you want the password for (e.g. facebook.com)
+You don’t need to remember or take note of the password because you can always come back, input the name,code and domain and tria will give you the same exact password that you had generated!
 
-Tria is a modern password generator that creates the same password by the same input data, but Tria never saves any password and just uses hash (HMAC/SHA256) to create your passwords. I tried to set all the standards for creating a strong password in Tria, such as:
-
-    At least 8 characters
-    A mixture of both uppercase and lowercase letters
-    A mixture of letters and numbers
-    Inclusion of at least one special character, e.g., ! @ # ? ]
-    
-Tria's Demo : https://triapass.web.app/
-
-Why Tria?
----------
-
-* Tria is full free forever.
-* Easy to use.
-* Nobody can hack our database.  
-    Why? Because we have no database!
-* Tria never saves your passwords.
-* You can use strong password anywhere.
-* You can even use Tria offline.
-
-### Tria apps
-https://github.com/Shahryar-Pirooz/Tria-app.git
-
- -->
-
-
-New version : =========. 98%
+# Good Lock!
