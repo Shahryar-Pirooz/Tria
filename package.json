@@ -15,6 +15,7 @@
     "format": "oxfmt src/"
   },
   "dependencies": {
+    "@lucide/vue": "^1.24.0",
     "@tailwindcss/vite": "^4.3.2",
     "tailwindcss": "^4.3.2",
     "vue": "^3.5.38"
@@ -27,6 +28,7 @@
     "@vue/tsconfig": "^0.9.1",
     "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-better-tailwindcss": "^4.6.1",
     "eslint-plugin-oxlint": "~1.69.0",
     "eslint-plugin-vue": "~10.9.2",
     "jiti": "^2.7.0",
