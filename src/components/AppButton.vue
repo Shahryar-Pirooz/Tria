@@ -20,7 +20,7 @@ const style = isAccent ? "bg-foreground text-background" : "bg-foreground/0 hove
   select-none"
   :class="style"
   >
-  <v-icon :name="icon"/>
+  <v-icon v-if="icon && icon!==''" :name="icon"/>
       <slot></slot>
   </button>
 </template>
