@@ -1,4 +1,4 @@
-![tria](./app/assets/images/stars.svg)
+![tria](src/assets/images/stars.svg)
 
 # 🔐 Tria Password Manager
 
