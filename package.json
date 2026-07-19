@@ -15,8 +15,8 @@
     "format": "oxfmt src/"
   },
   "dependencies": {
-    "@lucide/vue": "^1.24.0",
     "@tailwindcss/vite": "^4.3.2",
+    "oh-vue-icons": "1.0.0-rc3",
     "tailwindcss": "^4.3.2",
     "vue": "^3.5.38"
   },

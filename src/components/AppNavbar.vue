@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { useId, ref } from 'vue'
-import {Menu , X} from '@lucide/vue'
 import logo from '@/assets/images/logo.svg'
 import AppButton from './AppButton.vue'
+import type { AppNavbar } from '@/types/AppNavbar.js';
 
-const props = defineProps({ isScrolled: Boolean })
+const props = defineProps<AppNavbar>()
 const id = useId()
 const items = ref([
   { id, text: 'how it works', link: '#' },
