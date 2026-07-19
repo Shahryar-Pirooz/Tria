@@ -44,7 +44,17 @@ const openMenuHandler = ()=>{
       </div>
       <!-- SMALL SCREEN -->
       <div @click="openMenuHandler" class="h-full md:hidden">
-        <X v-if="isMenuOpen"/> <Menu v-else/>
+        <v-icon
+    v-if="isMenuOpen"
+    name="ri-close-line"
+    scale="1.2"
+  />
+
+  <v-icon
+    v-else
+    name="ri-menu-3-line"
+    scale="1.2"
+  />
       </div>
     </div>
   </header>
