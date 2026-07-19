@@ -7,7 +7,7 @@ import { motion } from 'motion-v'
 <template>
   <HeroBackground>
     <div
-      class="flex flex-col justify-center items-center container mx-auto p-16 gap-6"
+      class="flex flex-col justify-center items-center container mx-auto pt-16 md:p-16 gap-6"
     >
       <motion.div
         :initial="{y:40 , opacity:0}"
@@ -26,9 +26,9 @@ import { motion } from 'motion-v'
           delay:0.2,
           duration:1.1
         }">
-        <h1 class="text-center text-foreground text-7xl font-black">
+        <h1 class="text-center text-foreground text-5xl md:text-7xl font-black">
         <span>Passwords derived.</span><br /><span
-          class="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent"
+          class="bg-linear-to-r text-5xl md:text-7xl from-primary to-accent bg-clip-text text-transparent"
           >Never stored.</span
         >
       </h1>
@@ -39,7 +39,7 @@ import { motion } from 'motion-v'
           delay:0.3,
           duration:1
         }">
-        <p class="text-muted-foreground text-center text-2xl">
+        <p class="text-muted-foreground text-center text-lg md:text-2xl">
           Tria generates your passwords on the fly from a single<br />secret you keep in your head. No
           vault. No sync. Nothing to breach.
         </p>
