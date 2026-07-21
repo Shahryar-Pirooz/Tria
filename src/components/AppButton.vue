@@ -5,7 +5,7 @@ const style = isAccent ? "bg-foreground text-background" : "bg-foreground/0 hove
 </script>
 
 <template>
-  <button class="w-full
+  <div class="w-full
   cursor-pointer
   inline-flex
   gap-2
@@ -22,5 +22,5 @@ const style = isAccent ? "bg-foreground text-background" : "bg-foreground/0 hove
   >
   <v-icon v-if="icon && icon!==''" :name="icon"/>
       <slot></slot>
-  </button>
+  </div>
 </template>
