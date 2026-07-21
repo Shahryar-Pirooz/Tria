@@ -11,6 +11,8 @@
       bg-background
       bg-[linear-gradient(to_right,var(--color-foreground)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-foreground)_1px,transparent_1px)]
       bg-size-[40px_40px]
+      border-b
+      border-border
     "
   >
     <!-- Dark vignette -->
@@ -36,7 +38,7 @@
     ></div>
 
     <!-- Content -->
-    <div class="relative z-10">
+    <div class="relative z-10 py-20">
       <slot />
     </div>
   </div>

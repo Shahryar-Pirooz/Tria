@@ -40,7 +40,7 @@ const openMenuHandler = ()=>{
         </ul>
       </div>
       <div class="hidden max-w-36 md:flex flex-row flex-nowrap space-x-4 justify-end items-center">
-        <AppButton :is-accent="true">try it free</AppButton>
+        <AppButton :is-accent="true"><a href="#passwordGenerator">try it free</a></AppButton>
       </div>
       <!-- SMALL SCREEN -->
       <div @click="openMenuHandler" class="h-full md:hidden">

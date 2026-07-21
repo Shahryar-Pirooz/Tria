@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import AppNavbar from './components/AppNavbar.vue'
 import HeroSection from './components/Hero/HeroSection.vue'
+import StepsSection from './components/Steps/StepsSection.vue'
 const isScroll = ref(false)
 window.addEventListener('scroll', () => {
   isScroll.value = window.scrollY !== 0
@@ -12,7 +13,12 @@ window.addEventListener('scroll', () => {
   <AppNavbar :is-scrolled="isScroll" />
   <div class="text-primary" ref="body">
     <HeroSection/>
+    <StepsSection/>
   </div>
 </template>
 
-<style scoped></style>
+<style>
+* {
+  scroll-behavior: smooth;
+}
+</style>

@@ -53,7 +53,7 @@ const generatePassword = async (): Promise<void> => {
         class="inline-flex space-x-4 ring-2 ring-ring rounded-4xl px-3 py-px bg-primary/40 text-primary items-center"
       >
         <div class="size-2 rounded-full bg-primary shadow-[0_0_8px_2px] shadow-primary/50"></div>
-        <span class="text-center text-sm">Stateless · No database · Open source</span>
+        <span class="text-center text-sm font-jetbrains-mono">Stateless · No database · Open source</span>
       </motion.div>
       <motion.div
         :initial="{ y: 40, opacity: 0 }"
@@ -94,7 +94,8 @@ const generatePassword = async (): Promise<void> => {
         <AppButton :is-accent="false" icon="ri-github-line">View Source</AppButton>
       </motion.div>
     </div>
-    <div class="grid place-items-center mt-4 mx-2">
+    <div id="passwordGenerator" class="relative -top-32 invisible">1</div>
+    <div class="grid place-items-center my-10 mx-2">
       <motion.div
         :initial="{ y: -40, opacity: 0 }"
         :animate="{ y: 0, opacity: 1 }"
