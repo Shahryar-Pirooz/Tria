@@ -7,7 +7,7 @@ import type { AppNavbar } from '@/types/AppNavbar.js';
 const props = defineProps<AppNavbar>()
 const id = useId()
 const items = ref([
-  { id, text: 'how it works', link: '#' },
+  { id, text: 'how it works', link: '#steps' },
   { id, text: 'security', link: '#' },
   { id, text: 'why Tria?', link: '#' },
 ])
