@@ -1,7 +1,7 @@
 <script lang="ts"></script>
 <template>
   <div id="steps" class="relative -top-16 invisible"></div>
-  <div class="container mx-4 md:mx-auto max-w-5xl py-32 flex flex-col gap-6 border-t border-border">
+  <div class="container px-2 md:mx-auto max-w-5xl py-32 flex flex-col gap-6 border-t border-border">
     <div class="flex flex-col flex-nowrap space-y-2">
       <h3 class="uppercase text-sm font-jetbrains-mono">how it work</h3>
       <h2 class="text-4xl md:text-5xl font-black text-foreground">Three steps.</h2>
