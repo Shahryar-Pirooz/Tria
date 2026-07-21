@@ -6,7 +6,6 @@
     class="
       relative
       isolate
-      min-h-screen
       overflow-hidden
       bg-background
       bg-[linear-gradient(to_right,var(--color-foreground)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-foreground)_1px,transparent_1px)]
