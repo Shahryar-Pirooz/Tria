@@ -8,7 +8,6 @@ import { reactive, ref } from 'vue'
 import passwordGenerator from '@/utils/password_generator'
 import { useClipboard } from '@vueuse/core'
 
-
 const data = reactive<Data>({
   domain: '',
   name: '',
@@ -20,8 +19,8 @@ const isGenerating = ref(false)
 const error = ref('')
 const copied = ref(false)
 const inputBaseClasses =
-'text-sm border border-border rounded-xl px-4 py-2 bg-input-background outline-none transition-colors'
-useClipboard({source:output.value})
+  'rounded-xl border border-contrast/7 bg-field px-4 py-2 text-sm outline-none transition-colors'
+useClipboard({ source: output.value })
 const generatePassword = async (): Promise<void> => {
   error.value = ''
   isGenerating.value = true
@@ -31,8 +30,8 @@ const generatePassword = async (): Promise<void> => {
     output.value = pass
     copied.value = true
     setTimeout(() => {
-      copied.value=false
-    }, 2000);
+      copied.value = false
+    }, 2000)
   } catch (err) {
     error.value = err instanceof Error ? err.message : 'Failed to generate password'
   } finally {
@@ -50,10 +49,12 @@ const generatePassword = async (): Promise<void> => {
         :transition="{
           duration: 1.1,
         }"
-        class="inline-flex space-x-4 ring-2 ring-ring rounded-4xl px-3 py-px bg-primary/40 text-primary items-center"
+        class="inline-flex items-center space-x-4 rounded-4xl bg-brand/40 px-3 py-px text-brand ring-2 ring-brand"
       >
-        <div class="size-2 rounded-full bg-primary shadow-[0_0_8px_2px] shadow-primary/50"></div>
-        <span class="text-center text-sm font-jetbrains-mono">Stateless · No database · Open source</span>
+        <div class="size-2 rounded-full bg-brand shadow-[0_0_8px_2px] shadow-brand/50"></div>
+        <span class="text-center text-sm font-jetbrains-mono"
+          >Stateless · No database · Open source</span
+        >
       </motion.div>
       <motion.div
         :initial="{ y: 40, opacity: 0 }"
@@ -63,9 +64,9 @@ const generatePassword = async (): Promise<void> => {
           duration: 1.1,
         }"
       >
-        <h1 class="text-center text-foreground text-5xl md:text-7xl font-black">
+        <h1 class="text-center text-5xl font-black text-content md:text-7xl">
           <span>Passwords derived.</span><br /><span
-            class="bg-linear-to-r text-5xl md:text-7xl from-primary to-accent bg-clip-text text-transparent"
+            class="bg-linear-to-r from-brand to-brand-accent bg-clip-text text-5xl text-transparent md:text-7xl"
             >Never stored.</span
           >
         </h1>
@@ -78,7 +79,7 @@ const generatePassword = async (): Promise<void> => {
           duration: 1,
         }"
       >
-        <p class="text-muted-foreground text-center text-lg md:text-2xl">
+        <p class="text-center text-lg text-content-muted md:text-2xl">
           Tria generates your passwords on the fly from a single<br />secret you keep in your head.
           No vault. No sync. Nothing to breach.
         </p>
@@ -106,23 +107,27 @@ const generatePassword = async (): Promise<void> => {
       >
         <WindowBoard title="tria · derive" has3-btn>
           <form class="flex w-full flex-col" @submit.prevent="generatePassword">
-            <div class="border-b border-border">
-              <p class="p-4 text-xs/7 italic text-muted-foreground lg:text-sm">
+            <div class="border-b border-contrast/7">
+              <p class="p-4 text-xs/7 italic text-content-muted lg:text-sm">
                 f(
-                <span class="rounded bg-primary/20 px-2 not-italic text-primary"> secret </span> ,
-                <span class="rounded bg-cyan-300/20 px-2 not-italic text-cyan-300"> username </span>
-                , <span class="rounded bg-accent/20 px-2 not-italic text-accent"> domain </span> ) →
-                <span class="not-italic text-foreground"> Password </span>
+                <span class="rounded bg-brand/20 px-2 not-italic text-brand"> secret </span> ,
+                <span class="rounded bg-info/20 px-2 not-italic text-info"> username </span>
+                ,
+                <span class="rounded bg-brand-accent/20 px-2 not-italic text-brand-accent">
+                  domain
+                </span>
+                ) →
+                <span class="not-italic text-content"> Password </span>
               </p>
             </div>
             <div class="flex flex-col gap-4 p-4">
               <div class="flex flex-col gap-3 lg:flex-row">
                 <div class="flex flex-1 flex-col gap-1">
-                  <label for="secret" class="text-sm text-muted-foreground"> Secret </label>
+                  <label for="secret" class="text-sm text-content-muted"> Secret </label>
                   <input
                     id="secret"
                     v-model="data.masterCode"
-                    :class="[inputBaseClasses, 'text-primary caret-primary focus:border-primary']"
+                    :class="[inputBaseClasses, 'text-brand caret-brand focus:border-brand']"
                     type="password"
                     name="secret"
                     autocomplete="current-password"
@@ -131,14 +136,11 @@ const generatePassword = async (): Promise<void> => {
                   />
                 </div>
                 <div class="flex flex-1 flex-col gap-1">
-                  <label for="username" class="text-sm text-muted-foreground"> Username </label>
+                  <label for="username" class="text-sm text-content-muted"> Username </label>
                   <input
                     id="username"
                     v-model="data.name"
-                    :class="[
-                      inputBaseClasses,
-                      'text-cyan-300 caret-cyan-300 focus:border-cyan-300',
-                    ]"
+                    :class="[inputBaseClasses, 'text-info caret-info focus:border-info']"
                     type="text"
                     name="username"
                     autocomplete="username"
@@ -147,11 +149,14 @@ const generatePassword = async (): Promise<void> => {
                   />
                 </div>
                 <div class="flex flex-1 flex-col gap-1">
-                  <label for="domain" class="text-sm text-muted-foreground"> Domain </label>
+                  <label for="domain" class="text-sm text-content-muted"> Domain </label>
                   <input
                     id="domain"
                     v-model="data.domain"
-                    :class="[inputBaseClasses, 'text-accent caret-accent focus:border-accent']"
+                    :class="[
+                      inputBaseClasses,
+                      'text-brand-accent caret-brand-accent focus:border-brand-accent',
+                    ]"
                     type="text"
                     name="domain"
                     autocomplete="url"
@@ -161,35 +166,41 @@ const generatePassword = async (): Promise<void> => {
                 </div>
               </div>
               <div
-                class="flex min-w-0 max-w-full items-center gap-3 overflow-hidden rounded-xl border border-border bg-input-background px-4 py-2 text-sm"
+                class="flex min-w-0 max-w-full items-center gap-3 overflow-hidden rounded-xl border border-contrast/7 bg-field px-4 py-2 text-sm"
               >
                 <button
                   type="submit"
-                  class="shrink-0 cursor-pointer text-primary transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-50"
+                  class="shrink-0 cursor-pointer text-brand transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-50"
                   :disabled="isGenerating"
                 >
                   {{ isGenerating ? 'Deriving...' : 'Generate' }}
                 </button>
 
                 <output
-                  class="min-w-0 flex-1 break-all text-right text-muted-foreground selection:bg-transparent selection:text-primary"
+                  class="min-w-0 flex-1 break-all text-right text-content-muted selection:bg-transparent selection:text-brand"
                   aria-live="polite"
                 >
                   {{ isGenerating ? 'Deriving password...' : output }}
                 </output>
               </div>
 
-              <p v-if="error" class="text-center text-sm text-destructive" role="alert">
+              <p v-if="error" class="text-center text-sm text-danger" role="alert">
                 {{ error }}
               </p>
             </div>
-            <span class="pb-3 text-center text-xs text-muted-foreground">
+            <span class="pb-3 text-center text-xs text-content-muted">
               Nothing is stored · Nothing is sent · Try a different domain
             </span>
           </form>
         </WindowBoard>
       </motion.div>
-      <motion.div :initial="{opacity:0 , right:-10}" :animate="{opacity:1 , right:100}" v-if="copied" class="z-50 w-fit bottom-4 right-4 fixed bg-sidebar shadow shadow-primary/50 rounded-2xl text-sidebar-foreground p-4">Copied!</motion.div>
+      <motion.div
+        :initial="{ opacity: 0, right: -10 }"
+        :animate="{ opacity: 1, right: 100 }"
+        v-if="copied"
+        class="fixed right-4 bottom-4 z-50 w-fit rounded-2xl bg-window p-4 text-content shadow shadow-brand/50"
+        >Copied!</motion.div
+      >
     </div>
   </HeroBackground>
 </template>

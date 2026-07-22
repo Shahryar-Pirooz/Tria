@@ -1,92 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import 'tailwindcss';
 
-:root {
-  --font-size: 16px;
-  --background: #080808;
-  --foreground: #f0f0f0;
-  --card: #0f0f0f;
-  --card-foreground: #f0f0f0;
-  --popover: #0f0f0f;
-  --popover-foreground: #f0f0f0;
-  --primary: #388ce7;
-  --primary-foreground: #ffffff;
-  --secondary: #141414;
-  --secondary-foreground: #f0f0f0;
-  --muted: #111111;
-  --muted-foreground: #606060;
-  --accent: #3bdea8;
-  --accent-foreground: #080808;
-  --destructive: #d4183d;
-  --destructive-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.07);
-  --input: transparent;
-  --input-background: #111111;
-  --switch-background: #222222;
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-  --ring: #388ce7;
-  --chart-1: #388ce7;
-  --chart-2: #3bdea8;
-  --chart-3: #399fd9;
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.5rem;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #f0f0f0;
-  --sidebar-primary: #388ce7;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #141414;
-  --sidebar-accent-foreground: #f0f0f0;
-  --sidebar-border: rgba(255, 255, 255, 0.07);
-  --sidebar-ring: #388ce7;
-}
-
 @theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-input-background: var(--input-background);
-  --color-switch-background: var(--switch-background);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --font-jetbrains-mono: "JetBrains Mono";
-  --font-sans: "Figtree";
+  --color-page: oklch(0.134409 0 0);
+  --color-page-alternate: oklch(0.139791 0 0);
+  --color-window: oklch(0.144788 0 0);
+  --color-panel: oklch(0.15434 0 0);
+  --color-surface: oklch(0.168416 0 0);
+  --color-field: oklch(0.177638 0 0);
+  --color-step: oklch(0.251965 0 0);
+  --color-content-muted: oklch(0.489056 0 0);
+  --color-content: oklch(0.95514 0 0);
+  --color-contrast: oklch(1 0 0);
+  --color-brand: oklch(0.633932 0.158787 253.171);
+  --color-brand-middle: oklch(0.669572 0.125854 238.109);
+  --color-brand-accent: oklch(0.80536 0.152968 165.717);
+  --color-info: oklch(0.865 0.127 207.078);
+  --color-danger: oklch(0.558008 0.213657 19.4);
+  --color-window-close: oklch(0.712 0.194 13.428);
+  --color-window-minimize: oklch(0.828 0.189 84.429);
+  --color-window-maximize: oklch(0.841 0.238 128.85);
+  --font-jetbrains-mono: 'JetBrains Mono';
+  --font-sans: 'Figtree';
 }
 
 @layer base {
   body {
-    @apply text-foreground bg-background;
+    @apply bg-page text-content;
   }
 }

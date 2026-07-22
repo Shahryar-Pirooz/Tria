@@ -16,14 +16,14 @@ window.addEventListener('scroll', () => {
 
 <template>
   <AppNavbar :is-scrolled="isScroll" />
-  <div class="text-primary" ref="body">
-    <HeroSection/>
-    <StepsSection/>
-    <MathSection/>
-    <ComparisonSection/>
-    <TrustSection/>
-    <LastSection/>
-    <FooterSection/>
+  <div class="text-brand" ref="body">
+    <HeroSection />
+    <StepsSection />
+    <MathSection />
+    <ComparisonSection />
+    <TrustSection />
+    <LastSection />
+    <FooterSection />
   </div>
 </template>
 
