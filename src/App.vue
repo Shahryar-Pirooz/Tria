@@ -5,6 +5,7 @@ import HeroSection from './components/Hero/HeroSection.vue'
 import StepsSection from './components/Steps/StepsSection.vue'
 import MathSection from './components/math/MathSection.vue'
 import ComparisonSection from './components/Comparison/ComparisonSection.vue'
+import TrustSection from './components/Trust/TrustSection.vue'
 const isScroll = ref(false)
 window.addEventListener('scroll', () => {
   isScroll.value = window.scrollY !== 0
@@ -18,6 +19,7 @@ window.addEventListener('scroll', () => {
     <StepsSection/>
     <MathSection/>
     <ComparisonSection/>
+    <TrustSection/>
   </div>
 </template>
 

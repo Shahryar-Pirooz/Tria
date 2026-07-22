@@ -5,9 +5,10 @@ const style = isAccent ? "bg-foreground text-background" : "bg-foreground/0 hove
 </script>
 
 <template>
-  <div class="w-full
+  <div class="
   cursor-pointer
   inline-flex
+  max-w-md
   gap-2
   border
   px-4
