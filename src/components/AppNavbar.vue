@@ -8,8 +8,8 @@ const props = defineProps<AppNavbar>()
 const id = useId()
 const items = ref([
   { id, text: 'how it works', link: '#steps' },
-  { id, text: 'security', link: '#' },
-  { id, text: 'why Tria?', link: '#' },
+  { id, text: 'security', link: '#math' },
+  { id, text: 'why Tria?', link: '#comparison' },
 ])
 const isMenuOpen = ref(false)
 const openMenuHandler = ()=>{
