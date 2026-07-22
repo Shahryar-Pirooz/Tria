@@ -9,7 +9,7 @@ import AppButton from '../AppButton.vue';
       <!-- Content -->
       <div class="flex flex-col gap-6">
         <span
-          class="font-mono text-xs font-semibold uppercase tracking-widest text-[#606060]"
+          class="font-mono text-xs font-semibold uppercase tracking-widest text-muted-foreground"
         >
           Trust
         </span>
@@ -20,12 +20,12 @@ import AppButton from '../AppButton.vue';
           Don't trust us.
           <br />
 
-          <span class="text-white/30">
+          <span class="text-muted-foreground">
             Read the code.
           </span>
         </h2>
 
-        <p class="text-base leading-relaxed text-white/50">
+        <p class="text-base leading-relaxed text-muted-foreground">
           Tria is fully open source. Every line of the derivation logic, every
           UI interaction, every browser extension — public and auditable.
           Security through obscurity isn't security.
