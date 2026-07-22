@@ -7,6 +7,7 @@ import MathSection from './components/math/MathSection.vue'
 import ComparisonSection from './components/Comparison/ComparisonSection.vue'
 import TrustSection from './components/Trust/TrustSection.vue'
 import LastSection from './components/Last/LastSection.vue'
+import FooterSection from './components/Footer/FooterSection.vue'
 const isScroll = ref(false)
 window.addEventListener('scroll', () => {
   isScroll.value = window.scrollY !== 0
@@ -22,6 +23,7 @@ window.addEventListener('scroll', () => {
     <ComparisonSection/>
     <TrustSection/>
     <LastSection/>
+    <FooterSection/>
   </div>
 </template>
 
